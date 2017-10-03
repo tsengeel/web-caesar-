@@ -56,18 +56,14 @@ def encrypt():
     text = request.form['text']
     rot = request.form['rot']
     tr = rotate_string(text, int(rot))
-    #return forms
+    
     
     
     forms = form.format(tr)
-    # forms= form.format(text = '', rot = 'rot')
+ 
     return forms
-    # r = request.form['rot']
-    #t = request.form['text']
-    #text_rot = rotate_string(t , int(r))
-   
-    #return '<h1>'+format(text_rot)+'</h1>'
-   
+  
+    
      
 
 
