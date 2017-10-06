@@ -31,7 +31,7 @@ form = """
                 <input name = "rot" value = "0" type= "text">
                 <p class = "error"></p>
             </div>
-            <textarea type ="text" name="text">{0}</textarea>
+            <textarea type ="text" name="text" >{0}</textarea>
             <br>
             <input type="submit"> 
          
@@ -47,11 +47,20 @@ form = """
 
 @app.route("/")
 def index():
-    return form
+    #text = request.form['']
+    #rot = request.form['rot']
+    
+    #form = form.format(text = '', rot = '')
+    return form.format("")
+    
+
+     
+
+    
 
 @app.route("/", methods=['POST'])
 def encrypt():  
-   
+ 
     
     text = request.form['text']
     rot = request.form['rot']
